@@ -1,0 +1,54 @@
+name: microscopeProject
+dependencies:
+  - flake8
+  - pip
+  - setuptools
+  - wheel
+  - ipykernel
+  - nbconvert=5.6.1
+  - jupyter_contrib_nbextensions
+  - pip:
+      - opt-einsum # depcy for tf
+      - gast # depcy for tf
+      - termcolor # depcy for tf
+      - flatbuffers # depcy for tf
+      - astunparse
+      - wrapt
+      - google-api-python-client
+      - google-pasta
+      - numpy
+      - scipy
+      - pandas
+      - jupyterlab
+      - jupyterlab_widgets
+      - scikit-learn
+      - uritools # process urls from gcp
+      - h5py
+      - keras
+      - keras-preprocessing
+      - protobuf
+      - tensorboard
+      - tensorflow-estimator
+      - typing-extensions
+      - wrapt
+      - grpcio
+      - awscli
+      - plaidml-keras
+      - matplotlib
+      - tqdm
+      - future
+      - -e .
+      - kaggle
+      - pyforest # lazily import all packages
+      - google-cloud-storage
+      - pip_magic
+      - multiprocess
+      - mako # opengl support
+      - black # autoformat inside jupyter cells
+      #- git+git://github.com/psf/black # the latest version
+      - blackcellmagic # automatic linter
+      - ipywidgets # make jupyter notebooks widgets extension work
+      # From now on, we will install with --no-deps and clone to some dir
+      - https://github.com/apple/tensorflow_macos/releases/download/v0.1alpha3/tensorflow_macos-0.1a3-cp38-cp38-macosx_11_0_x86_64.whl # --upgrade --force --no-dependencies
+      - https://github.com/apple/tensorflow_macos/releases/download/v0.1alpha3/tensorflow_addons_macos-0.1a3-cp38-cp38-macosx_11_0_x86_64.whl #--upgrade --force --no-dependencies
+  - python=3.8
